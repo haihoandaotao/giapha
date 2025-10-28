@@ -1,0 +1,198 @@
+.family-tree-page {
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+}
+
+.tree-controls {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tree-controls h2 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.legend-color.male {
+  background-color: #3498db;
+}
+
+.legend-color.female {
+  background-color: #e91e63;
+}
+
+.tree-container {
+  flex: 1;
+  background: #fafafa;
+  overflow: auto;
+}
+
+.tree-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.family-detail {
+  padding: 20px 0;
+}
+
+.family-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.family-header h1 {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: var(--border-radius);
+}
+
+.stat-box .stat-value {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 5px;
+}
+
+.stat-box .stat-label {
+  color: #666;
+  font-size: 14px;
+}
+
+.members-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.member-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+}
+
+.member-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.member-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.generation-badge {
+  background: var(--secondary-color);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.member-meta {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.gender-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.gender-badge.nam {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.gender-badge.nữ {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.search-box {
+  max-width: 400px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.ancestor-info {
+  color: #666;
+  margin: 10px 0;
+  font-style: italic;
+}
