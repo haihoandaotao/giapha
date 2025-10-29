@@ -6,12 +6,13 @@ const {
   createPerson,
   updatePerson,
   deletePerson,
-  addSpouse,
-  getFamilyTree
+  getFamilyTree,
+  searchPersons
 } = require('../controllers/personController');
 
 // Public routes
 router.get('/', getAllPersons);
+router.get('/search', searchPersons);
 router.get('/family-tree/:familyId', getFamilyTree);
 router.get('/:id', getPerson);
 
@@ -19,6 +20,5 @@ router.get('/:id', getPerson);
 router.post('/', createPerson);
 router.put('/:id', updatePerson);
 router.delete('/:id', deletePerson);
-router.post('/:id/spouse', addSpouse);
 
 module.exports = router;
