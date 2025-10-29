@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Families from './pages/Families';
+import CreateFamily from './pages/CreateFamily';
 import FamilyDetail from './pages/FamilyDetail';
 import FamilyTree from './pages/FamilyTree';
 import PersonDetail from './pages/PersonDetail';
@@ -28,6 +29,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/families" element={<Families />} />
+              <Route path="/family/create" element={<CreateFamily />} />
               <Route path="/family/:id" element={<FamilyDetail />} />
               <Route path="/family-tree/:id" element={<FamilyTree />} />
               <Route path="/person/:id" element={<PersonDetail />} />

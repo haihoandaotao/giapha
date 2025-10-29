@@ -36,20 +36,28 @@ const Families = () => {
     <div className="container">
       <div className="page-header">
         <h1>Danh Sách Dòng Họ</h1>
-        <div className="search-box">
-          <input
-            type="text"
-            placeholder="Tìm kiếm dòng họ..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="search-input"
-          />
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <div className="search-box">
+            <input
+              type="text"
+              placeholder="Tìm kiếm dòng họ..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="search-input"
+            />
+          </div>
+          <Link to="/family/create" className="btn btn-primary">
+            + Tạo Dòng Họ Mới
+          </Link>
         </div>
       </div>
 
       {filteredFamilies.length === 0 ? (
         <div className="empty-state">
           <p>Không tìm thấy dòng họ nào</p>
+          <Link to="/family/create" className="btn btn-primary" style={{ marginTop: '1rem' }}>
+            + Tạo Dòng Họ Đầu Tiên
+          </Link>
         </div>
       ) : (
         <div className="grid">
